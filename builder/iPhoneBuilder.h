@@ -7,29 +7,28 @@
 #pragma once
 
 #include "Builder.h"
-
-#include <string>
+#include "iPhone.h"
 
 class iPhoneBuilder : public Builder
 {
 public:
     virtual void buildScreen() {
-        iPhone += "iPhoneScreen";
+        _iPhone.assemble("iPhoneScreen");
     }
 
     virtual void buildBattery() {
-        iPhone += "iPhoneBattery";
+        _iPhone.assemble("iPhoneBattery");
     }
 
     virtual void buildCPU() {
-        iPhone += "iPhoneCPU";
+        _iPhone.assemble("iPhoneCPU");
     }
 
-    virtual std::string getProduct() const {
-        return iPhone;
+    iPhone getProduct() const {
+        return _iPhone;
     }
 
 private:
-    std::string iPhone;
+    iPhone _iPhone;
 };
 

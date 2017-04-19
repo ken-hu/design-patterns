@@ -8,17 +8,13 @@
 
 #include "Builder.h"
 
-#include <string>
-
 class Apple
 {
 public:
-    std::string buildProduct(Builder* builder) {
+    void buildProduct(Builder* builder) {
         builder->buildScreen();
         builder->buildBattery();
         builder->buildCPU();
-
-        return builder->getProduct();
     }
 };
 

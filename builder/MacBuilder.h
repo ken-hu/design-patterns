@@ -7,29 +7,28 @@
 #pragma once
 
 #include "Builder.h"
-
-#include <string>
+#include "Mac.h"
 
 class MacBuilder : public Builder
 {
 public:
     virtual void buildScreen() {
-        Mac += "MacScreen";
+        _Mac.assemble("MacScreen");
     }
 
     virtual void buildBattery() {
-        Mac += "MacBattery";
+        _Mac.assemble("MacBattery");
     }
 
     virtual void buildCPU() {
-        Mac += "MacCPU";
+        _Mac.assemble("MacCPU");
     }
 
-    virtual std::string getProduct() const {
-        return Mac;
+    Mac getProduct() const {
+        return _Mac;
     }
 
 private:
-    std::string Mac;
+    Mac _Mac;
 };
 
