@@ -14,5 +14,6 @@ public:
     virtual void buildScreen() {}
     virtual void buildBattery() {}
     virtual void buildCPU() {}
+    virtual void buildKeyboard() {}
 };
 

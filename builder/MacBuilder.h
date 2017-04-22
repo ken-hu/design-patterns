@@ -24,6 +24,10 @@ public:
         _Mac.assemble("MacCPU");
     }
 
+    virtual void buildKeyboard() {
+        _Mac.assemble("MacKeyboard");
+    }
+
     Mac getProduct() const {
         return _Mac;
     }
