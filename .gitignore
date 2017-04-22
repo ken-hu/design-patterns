@@ -1,6 +1,4 @@
-####################################
-######## OS generated files ########
-####################################
+# OS generated files
 .DS_Store
 .DS_Store?
 *.swp
@@ -11,3 +9,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 a.out
+
+# Debugger generated files
+*.dSYM
