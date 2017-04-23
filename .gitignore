@@ -12,3 +12,4 @@ a.out
 
 # Debugger generated files
 *.dSYM
+*.o
