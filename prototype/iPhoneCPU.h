@@ -8,13 +8,13 @@
 
 #include <string>
 
-#include "Battery.h"
+#include "CPU.h"
 
 class iPhoneCPU : public CPU
 {
 public:
-    virtual CPU* clone() {
-        return new iPhoneCPU ;
+    virtual CPUPtr clone() {
+        return CPUPtr(new iPhoneCPU);
     }
 
     std::string getName() {

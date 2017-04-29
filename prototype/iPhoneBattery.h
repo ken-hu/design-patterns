@@ -13,8 +13,8 @@
 class iPhoneBattery : public Battery
 {
 public:
-    virtual Battery* clone() {
-        return new iPhoneBattery;
+    virtual BatteryPtr clone() {
+        return BatteryPtr(new iPhoneBattery);
     }
 
     std::string getName() {

@@ -7,11 +7,14 @@
 #pragma	once
 
 #include <string>
+#include <memory>
 
 class Battery
 {
 public:
-    virtual Battery* clone() = 0;
+    using BatteryPtr = std::unique_ptr<Battery>;
+
+    virtual BatteryPtr clone() = 0;
     virtual std::string getName() = 0;
 
     virtual ~Battery() {};

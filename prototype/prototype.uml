@@ -1,0 +1,45 @@
+@startuml
+abstract class Screen {
+    +{abstract} clone() : Screen
+    +{abstract} getName() : std::string
+}
+
+abstract class Battery {
+    +{abstract} clone() : Battery
+    +{abstract} getName() : std::string
+}
+
+abstract class CPU {
+    +{abstract} clone() : CPU
+    +{abstract} getName() : std::string
+}
+
+class iPhoneScreen {
+    +clone() : Screen
+    +getName() : std::string
+}
+
+class iPhoneBattery {
+    +clone() : Battery
+    +getName() : std::string
+}
+
+class iPhoneCPU {
+    +clone() : CPU
+    +getName() : std::string
+}
+
+class PhoneFactory {
+    +PhoneFactory(Screen, Battery, CPU)
+    +makeScreen() : Screen
+    +makeBattery() : Battery
+    +makeCPU() : CPU
+}
+
+Screen <|-- iPhoneScreen
+Battery <|-- iPhoneBattery
+CPU <|-- iPhoneCPU
+PhoneFactory --> Screen
+PhoneFactory --> Battery
+PhoneFactory --> CPU
+@enduml

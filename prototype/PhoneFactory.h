@@ -7,30 +7,35 @@
 #pragma	once
 
 #include <iostream>
+#include <utility>
 
 #include "Screen.h"
 #include "Battery.h"
 #include "CPU.h"
 
+using ScreenPtr = std::unique_ptr<Screen>;
+using BatteryPtr = std::unique_ptr<Battery>;
+using CPUPtr = std::unique_ptr<CPU>;
+
 class PhoneFactory
 {
 public:
-    PhoneFactory (Screen* screen, Battery* battery, CPU* cpu) {
-        _prototypeScreen = screen;
-        _prototypeBattery = battery;
-        _prototypeCPU = cpu;
+    PhoneFactory (ScreenPtr& screen, BatteryPtr& battery, CPUPtr& cpu) {
+        _prototypeScreen = std::move(screen);
+        _prototypeBattery = std::move(battery);
+        _prototypeCPU = std::move(cpu);
     }
 
-    Screen* makeScreen() {
-        _prototypeScreen->clone();
+    ScreenPtr makeScreen() {
+        return _prototypeScreen->clone();
     }
 
-    Battery* makeBattery() {
-        _prototypeBattery->clone();
+    BatteryPtr makeBattery() {
+        return _prototypeBattery->clone();
     }
 
-    Battery* makeCPU() {
-        _prototypeCPU->clone();
+    CPUPtr makeCPU() {
+        return _prototypeCPU->clone();
     }
 
     void makePhone() {
@@ -38,8 +43,8 @@ public:
     }
 
 private:
-    Screen* _prototypeScreen;
-    Battery* _prototypeBattery;
-    CPU* _prototypeCPU;
+    ScreenPtr _prototypeScreen;
+    BatteryPtr _prototypeBattery;
+    CPUPtr _prototypeCPU;
 };
 

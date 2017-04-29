@@ -7,11 +7,14 @@
 #pragma	once
 
 #include <string>
+#include <memory>
 
 class CPU
 {
 public:
-    virtual CPU* clone() = 0;
+    using CPUPtr = std::unique_ptr<CPU>;
+
+    virtual CPUPtr clone() = 0;
     virtual std::string getName() = 0;
 
     virtual ~CPU() {};

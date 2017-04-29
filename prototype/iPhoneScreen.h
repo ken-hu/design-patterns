@@ -13,8 +13,8 @@
 class iPhoneScreen : public Screen
 {
 public:
-    virtual Screen* clone() {
-        return new iPhoneScreen;
+    virtual ScreenPtr clone() {
+        return ScreenPtr(new iPhoneScreen);
     }
 
     std::string getName() {

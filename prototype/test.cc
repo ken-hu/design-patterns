@@ -11,10 +11,14 @@
 
 int main ()
 {
-    iPhoneScreen screen;
-    iPhoneBattery battery;
-    iPhoneCPU cpu;
-    PhoneFactory factory(&screen, &battery, &cpu);
+    ScreenPtr screen(new iPhoneScreen);
+    BatteryPtr battery(new iPhoneBattery);
+    CPUPtr cpu(new iPhoneCPU);
+
+    PhoneFactory factory(screen, battery, cpu);
     factory.makePhone();
+    factory.makeScreen();
+    factory.makeBattery();
+    factory.makeCPU();
 }
 

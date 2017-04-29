@@ -7,11 +7,14 @@
 #pragma	once
 
 #include <string>
+#include <memory>
 
 class Screen
 {
 public:
-    virtual Screen* clone() = 0;
+    using ScreenPtr = std::unique_ptr<Screen>;
+
+    virtual ScreenPtr clone() = 0;
     virtual std::string getName() = 0;
 
     virtual ~Screen() {};
