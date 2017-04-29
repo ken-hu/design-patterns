@@ -1,7 +1,7 @@
 @startuml
 abstract class Vendor {
-   +makePhone() : Phone
-   +makeLaptop() : Laptop
+   +{abstract} makePhone() : Phone
+   +{abstract} makeLaptop() : Laptop
 }
 
 class Apple {
