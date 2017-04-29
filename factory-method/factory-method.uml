@@ -1,0 +1,29 @@
+@startuml
+abstract class ElecProductCreator {
+    +{abstract} createProduct(ProductType) : ElecProduct
+}
+
+
+abstract class ElecProduct {
+    +{abstract} getProductType() : ProductType
+}
+
+class iOSCreator {
+    +createProduct(ProductType) : ElecProduct
+}
+
+class iOSProduct {
+    +iOSProduct(ProductType)
+    +getProductType() : ProductType
+}
+
+class ProductType{
+    +iPhone
+    +Mac
+    +iPad
+}
+
+ElecProductCreator <|-- iOSCreator
+ElecProduct <|-- iOSProduct
+iOSCreator ..> iOSProduct
+@enduml

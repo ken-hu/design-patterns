@@ -6,11 +6,17 @@
 
 #pragma	once
 
+#include <memory>
+
 #include "ProductType.h"
 
 class ElecProduct
 {
 public:
-    virtual ProductType getProductType() {};
+    using ElecProductPtr = std::unique_ptr<ElecProduct>;
+
+    virtual ProductType getProductType() = 0;
+
+    virtual ~ElecProduct() {}
 };
 

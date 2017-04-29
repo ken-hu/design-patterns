@@ -18,6 +18,8 @@ public:
     virtual ProductType getProductType() {
         return _productType;
     }
+
+    virtual ~iOSProduct() {}
 private:
     ProductType _productType;
 };

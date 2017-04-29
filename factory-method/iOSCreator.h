@@ -13,8 +13,10 @@
 class iOSCreator : public ElecProductCreator
 {
 public:
-    virtual ElecProduct* createProduct(ProductType productType) {
-        return new iOSProduct(productType);
+    virtual ElecProductPtr createProduct(ProductType productType) {
+        return ElecProductPtr(new iOSProduct(productType));
     }
+
+    virtual ~iOSCreator() {}
 };
 
