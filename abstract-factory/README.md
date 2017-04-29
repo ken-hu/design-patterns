@@ -10,3 +10,5 @@ Only the concrete factory classes have the information of the products. The clie
 
 The key aspect is the parameterizing is achived by **object composition**. The products are built through other objects (_Apple_, _Windows_).
 
+![Abstract Factory](./abstract-factory.png "Abstract Factory")
+

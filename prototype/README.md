@@ -6,3 +6,5 @@ Prototype is similar to Builder. Instead of passing a builder, it passes the ins
 
 Prototype relies on **object composition**.
 
+![Prototype](./prototype.png "Prototype")
+

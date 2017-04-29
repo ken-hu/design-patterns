@@ -9,3 +9,6 @@ On the client side, it has the infomation about all the builders and products, i
 But only the director and the abstract builder know all the parts to build any type of products, the director notifies the builder whenever a part of the product should be built. Concrete builders handle the requests from director and add the parts to the product.
 
 From the client and director point of view, the design pattern paramerizing the system relies more on **object composition**.
+
+![Builder](./builder.png "Builder")
+
