@@ -8,9 +8,5 @@
 
 class Phone
 {
-public:
-    virtual Phone* makePhone() const {
-        return new Phone;
-    }
 };
 

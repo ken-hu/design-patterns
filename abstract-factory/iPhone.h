@@ -16,5 +16,7 @@ public:
     iPhone () {
         std::cout << "An iPhone is created." << std::endl;
     }
+
+    virtual ~iPhone() {}
 };
 

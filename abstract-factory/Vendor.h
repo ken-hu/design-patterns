@@ -9,10 +9,17 @@
 #include "Phone.h"
 #include "Laptop.h"
 
+#include <memory>
+
 class Vendor
 {
 public:
-    virtual Phone*  makePhone()  const {}
-    virtual Laptop* makeLaptop() const {}
+    using PhonePtr = std::unique_ptr<Phone>;
+    using LaptopPtr = std::unique_ptr<Laptop>;
+
+    virtual PhonePtr makePhone() = 0;
+    virtual LaptopPtr makeLaptop() = 0;
+
+    virtual ~Vendor() {}
 };
 

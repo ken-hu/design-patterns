@@ -14,11 +14,13 @@
 class Microsoft: public Vendor
 {
 public:
-    virtual Phone* makePhone()  const {
-        return new WindowsPhone;
+    virtual PhonePtr makePhone() {
+        return PhonePtr(new WindowsPhone);
     }
-    virtual Laptop* makeLaptop() const {
-        return new WindowsLaptop;
+    virtual LaptopPtr makeLaptop() {
+        return LaptopPtr(new WindowsLaptop);
     }
+
+    virtual ~Microsoft() {}
 };
 

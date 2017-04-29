@@ -13,8 +13,10 @@
 class WindowsLaptop : public Laptop
 {
 public:
-    WindowsLaptop () {
+    WindowsLaptop() {
         std::cout << "A WindowsLaptop is created." << std::endl;
     }
+
+    virtual ~WindowsLaptop() {}
 };
 

@@ -8,9 +8,5 @@
 
 class Laptop
 {
-public:
-    virtual Laptop* makeLaptop() const {
-        return new Laptop;
-    }
 };
 

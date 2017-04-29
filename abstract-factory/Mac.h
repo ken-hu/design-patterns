@@ -16,5 +16,7 @@ public:
     Mac () {
         std::cout << "A Mac is created." << std::endl;
     }
+
+    virtual ~Mac() {}
 };
 

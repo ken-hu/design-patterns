@@ -1,0 +1,61 @@
+@startuml
+abstract class Vendor {
+   +makePhone() : Phone
+   +makeLaptop() : Laptop
+}
+
+class Apple {
+   +makePhone() : Phone
+   +makeLaptop() : Laptop
+}
+
+class Microsoft {
+   +makePhone() : Phone  
+   +makeLaptop() : Laptop 
+}
+
+abstract class Phone {
+}
+
+class iPhone {
+    +iPhone()
+}
+class WindowsPhone {
+    +WindowsPhone()
+}
+
+abstract class Laptop {
+}
+
+class Mac {
+    +Mac()
+}
+
+class WindowsLaptop {
+    +WindowsLaptop()
+}
+
+class Client {
+    +getAllProducts(Vendor)
+    +getPhone(Vendor) : Phone
+    +getLaptop(Vendor) : Laptop 
+}
+
+Vendor <|-- Apple
+Vendor <|-- Microsoft
+Phone <|-- iPhone
+Phone <|-- WindowsPhone
+Laptop <|-- Mac
+Laptop <|-- WindowsLaptop
+
+Client --> Vendor
+Client --> Phone
+Client --> Laptop
+
+/'
+Apple ..>iPhone
+Apple ..>Mac
+Microsoft ..>WindowsPhone
+Microsoft ..>WindowsLaptop
+'/
+@enduml

@@ -16,5 +16,7 @@ public:
     WindowsPhone () {
         std::cout << "A WindowsPhone is created." << std::endl;
     }
+
+    virtual ~WindowsPhone() {}
 };
 

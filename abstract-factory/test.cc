@@ -8,11 +8,15 @@
 #include "Apple.h"
 #include "Microsoft.h"
 
-int main (void)
+int main()
 {
-	Client::getAllProducts(new Apple);
-	Client::getAllProducts(new Microsoft);
-	Client::getPhone(new Apple);
-	Client::getPhone(new Microsoft);
-	return 0;
+    VendorPtr ApplePtr(new Apple);
+    VendorPtr MicrosoftPtr(new Microsoft);
+
+    Client::getAllProducts(ApplePtr);
+    Client::getAllProducts(MicrosoftPtr);
+    Client::getPhone(ApplePtr);
+    Client::getPhone(MicrosoftPtr);
+
+    return 0;
 }

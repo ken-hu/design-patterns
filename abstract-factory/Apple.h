@@ -14,11 +14,13 @@
 class Apple: public Vendor
 {
 public:
-    virtual Phone* makePhone()  const {
-        return new iPhone;
+    virtual PhonePtr makePhone() {
+        return PhonePtr(new iPhone);
     }
-    virtual Laptop* makeLaptop() const {
-        return new Mac;
+    virtual LaptopPtr makeLaptop() {
+        return LaptopPtr(new Mac);
     }
+
+    virtual ~Apple() {}
 };
 
