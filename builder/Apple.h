@@ -12,11 +12,18 @@
 class Apple
 {
 public:
-    void buildProduct(Builder* builder) {
-        builder->buildScreen();
-        builder->buildBattery();
-        builder->buildCPU();
-        builder->buildKeyboard();
+    Apple(Builder* builder) {
+        _builder = builder;
     }
+
+    void buildProduct() {
+        _builder->buildScreen();
+        _builder->buildBattery();
+        _builder->buildCPU();
+        _builder->buildKeyboard();
+    }
+
+private:
+    Builder* _builder = nullptr;
 };
 

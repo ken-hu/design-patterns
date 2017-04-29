@@ -1,0 +1,54 @@
+@startuml
+abstract class Builder {
+    +{abstract} buildScreen()
+    +{abstract} buildBattery()
+    +{abstract} buildCPU()
+    +{abstract} buildKeyboard()
+}
+
+class Apple {
+    -_builder : Builder
+    +Apple(Builder)
+    +buildProduct()
+}
+
+class iPhoneBuilder {
+    -_iPhone : iPhone
+    +buildScreen()
+    +buildBattery()
+    +buildCPU()
+    +getProduct() : iPhone
+}
+
+class iPhone {
+    -_iPhone : std::string
+    +assemble(std::string)
+    +toString() : std::string
+}
+
+class MacBuilder {
+    -_Mac : Mac
+    +buildScreen()
+    +buildBattery()
+    +buildCPU()
+    +buildKeyboard()
+    +getProduct() : Mac
+}
+
+class Mac {
+    -_Mac : std::string
+    +assemble(std::string)
+    +toString() : std::string
+}
+
+class Client {
+    +getiPhone() : iPhone
+    +getMac() : Mac
+}
+
+Apple "builder" o-- Builder
+Builder <|-- iPhoneBuilder
+Builder <|-- MacBuilder
+iPhoneBuilder ..> iPhone
+MacBuilder ..> Mac
+@enduml

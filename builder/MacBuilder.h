@@ -32,6 +32,8 @@ public:
         return _Mac;
     }
 
+    virtual ~MacBuilder() {}
+
 private:
     Mac _Mac;
 };

@@ -28,6 +28,8 @@ public:
         return _iPhone;
     }
 
+    virtual ~iPhoneBuilder() {}
+
 private:
     iPhone _iPhone;
 };

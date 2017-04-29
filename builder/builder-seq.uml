@@ -1,0 +1,31 @@
+@startuml
+actor Client
+participant "Apple" as A
+participant "iPhoneBuilder" as B
+
+Client --> B: new iPhoneBuilder
+activate B
+deactivate B
+
+Client --> A: Apple(iPhoneBuilder)
+activate A
+deactivate A
+
+Client --> A: buildProduct( )
+activate A
+
+A -> B: buildScreen( )
+activate B
+deactivate B
+A -> B: buildBattery( )
+activate B
+deactivate B
+A -> B: buildCPU( )
+activate B
+deactivate B
+deactivate A
+
+Client --> B: getProduct( )
+activate B
+deactivate B
+@enduml

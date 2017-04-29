@@ -17,17 +17,17 @@ class Client
 {
 public:
     static iPhone getiPhone() {
-        Apple* AppleInc = new Apple;
-        iPhoneBuilder* iPhoneBuilderObject = new iPhoneBuilder;
-        AppleInc->buildProduct(iPhoneBuilderObject);
-        return iPhoneBuilderObject->getProduct();
+        iPhoneBuilder iPhoneBuilderObject;
+        Apple AppleInc(&iPhoneBuilderObject);
+        AppleInc.buildProduct();
+        return iPhoneBuilderObject.getProduct();
     }
 
     static Mac getMac() {
-        Apple* AppleInc = new Apple;
-        MacBuilder* MacBuilderObject = new MacBuilder;
-        AppleInc->buildProduct(MacBuilderObject);
-        return MacBuilderObject->getProduct();
+        MacBuilder MacBuilderObject;
+        Apple AppleInc(&MacBuilderObject);
+        AppleInc.buildProduct();
+        return MacBuilderObject.getProduct();
     }
 };
 
