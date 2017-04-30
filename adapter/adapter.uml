@@ -1,0 +1,21 @@
+@startuml
+abstract class DatabaseTableOperation <<Target>> {
+    +{abstract} createTable(TableName)
+    +{abstract} showTable(TableName)
+    +{abstract} dropTable(TableName)
+}
+
+class PostgresTableOperation <<Adaptee>> {
+    +backslashD(TableName)
+}
+
+class PostgresTableOperationAdapter <<Adapter>> {
+    +createTable(TableName)
+    +showTable(TableName)
+    +dropTable(TableName)
+}
+
+DatabaseTableOperation <|-- PostgresTableOperationAdapter
+PostgresTableOperation <|-- PostgresTableOperationAdapter
+Client --> DatabaseTableOperation
+@enduml
