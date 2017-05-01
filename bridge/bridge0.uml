@@ -1,0 +1,26 @@
+@startuml
+abstract class WebsiteModule {
+    +{abstract} setTheme()
+}
+
+class DarkNavigation {
+    +setTheme()
+}
+
+class LightNavigation {
+    +setTheme()
+}
+
+class DarkBody {
+    +setTheme()
+}
+
+class LightBody {
+    +setTheme()
+}
+
+WebsiteModule <|-- DarkNavigation
+WebsiteModule <|-- LightNavigation
+WebsiteModule <|-- DarkBody
+WebsiteModule <|-- LightBody
+@enduml

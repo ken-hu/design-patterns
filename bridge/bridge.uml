@@ -1,0 +1,36 @@
+@startuml
+abstract class WebsiteModule {
+    -_imp : ModuleTheme
+    #getImplementor() : ModuleImp
+    +WebsiteModule(ModuleImp)
+    +{abstract} setTheme()
+}
+
+class Navigation {
+    +Navigation(ModuleImp)
+    +setTheme()
+}
+
+class Body {
+    +Body(ModuleImp)
+    +setTheme()
+}
+
+abstract class ModuleImp {
+    +{abstract} setThemeImp()
+}
+
+class DarkTheme {
+    +setThemeImp()
+}
+
+class LightTheme {
+    +setThemeImp()
+}
+
+ModuleImp <|-- DarkTheme
+ModuleImp <|-- LightTheme
+WebsiteModule <|-- Navigation
+WebsiteModule <|-- Body
+WebsiteModule "Imp" o--> ModuleImp : bridge
+@enduml
