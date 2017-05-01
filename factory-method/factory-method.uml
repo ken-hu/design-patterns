@@ -17,7 +17,7 @@ class iOSProduct {
     +getProductType() : ProductType
 }
 
-class ProductType{
+enum ProductType{
     +iPhone
     +Mac
     +iPad
