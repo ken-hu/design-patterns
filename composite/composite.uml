@@ -1,0 +1,30 @@
+@startuml
+abstract class Picture <<Component>> {
+    +add(Picture)
+    +remove(Picture)
+    +{abstract} print()
+    +{abstract} getContent() : std::string
+}
+
+class Text <<Leaf>> {
+    -_content : std::string
+    +Text(std::string)
+    +print()
+    +getContent() : std::string
+}
+
+class CompositePicture <<Composite>> {
+    -_pictures : std::list<Picture>
+    -_content : std::string
+    +CompositePicture(std::string)
+    +add(Picture)
+    +remove(Picture)
+    +print()
+    +getContent() : std::string
+}
+
+Picture <|-- Text
+Picture <|-- CompositePicture
+Client --> Picture
+CompositePicture "children" o--> "0..*" Picture
+@enduml
