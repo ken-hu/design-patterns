@@ -1,0 +1,39 @@
+@startuml
+abstract class Person <<Component>> {
+    +{abstract} dress()
+}
+
+class Man <<ConcreteComponent>> {
+    +dress()
+}
+
+class Woman <<ConcreteComponent>> {
+    +dress()
+}
+
+abstract class Clothes <<Decorator>> {
+    -_person : Person
+    +Clothes(Person)
+    +dress()
+}
+
+class Jacket <<ConcreteDecorator>> {
+    -dressInJacket()
+    +Jacket(Person)
+    +dress()
+}
+
+class Blouse <<ConcreteDecorator>> {
+    -dressInBlouse()
+    +Blouse(Person)
+    +dress()
+
+}
+
+Person <|-- Man
+Person <|-- Woman
+Person <|-- Clothes
+Clothes <|-- Jacket
+Clothes <|-- Blouse
+Clothes "person" o..> Person
+@enduml

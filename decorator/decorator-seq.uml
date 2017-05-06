@@ -1,0 +1,38 @@
+@startuml
+actor Client
+participant "Person" as P
+participant "Man" as M
+participant "Clothes" as C
+participant "Jacket" as J
+
+Client --> M : Person* man = new Man
+activate M
+deactivate M
+
+Client --> J : Person* manInJacket = new Jacket(man)
+activate J
+deactivate J
+
+Client -> P : manInJacket->dress()
+activate P
+
+P -> J : dress()
+activate J
+
+J -> C : Clothes::dress()
+activate C
+
+C -> M : dress()
+activate M
+
+M --> C : return
+deactivate M
+
+C --> J : return
+deactivate C
+
+J -> J : dressInJacket()
+J --> P : return
+deactivate J
+deactivate P
+@enduml
