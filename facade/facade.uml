@@ -1,0 +1,26 @@
+@startuml
+class MonitorMode <<Facade>> {
+    +powerSave()
+    +highPerformance()
+}
+
+class Contrast {
+    +increaseContrast()
+    +decreaseContrast()
+}
+
+class Brightness {
+    +increaseBrightness()
+    +decreaseBrightness()
+}
+
+class Sharpness {
+    +increaseBrightness()
+    +decreaseBrightness()
+}
+
+MonitorMode --> Contrast
+MonitorMode --> Brightness
+MonitorMode --> Sharpness
+@enduml
+
