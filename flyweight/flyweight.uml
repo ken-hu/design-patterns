@@ -1,0 +1,20 @@
+@startuml
+class CharacterFactory <<FlyweightFactory>> {
+    -characterPool : unordered_map<char, Character>
+    +getCharacterObject(char)
+}
+
+abstract class Character <<Flyweight>> {
+    +{abstract} printCharacter(Coord)
+}
+
+class SharedCharacter <<ConcreteFlyweight>> {
+    -_value
+    +SharedCharacter(char)
+    +printCharacter(Coord)
+}
+
+CharacterFactory "flyweights" o--> Character
+Character <|-- SharedCharacter
+@enduml
+
