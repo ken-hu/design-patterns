@@ -9,7 +9,7 @@ abstract class Character <<Flyweight>> {
 }
 
 class SharedCharacter <<ConcreteFlyweight>> {
-    -_value
+    -_value : char
     +SharedCharacter(char)
     +printCharacter(Coord)
 }
