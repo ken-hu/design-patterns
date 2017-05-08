@@ -1,0 +1,19 @@
+@startuml
+abstract class BankAccount <<Subject>> {
+    +{abstract} withdraw(int) = 0
+}
+
+class RealBankAccount <<Real Subject>> {
+    +withdraw(int)
+}
+
+class BankAccountProxy <<Proxy>> {
+    -_realBankAccount : RealBankAccount
+    -_authenticated : bool
+    +authenticate(bool)
+    +withdraw(int)
+}
+
+BankAccount <|-- RealBankAccount
+BankAccount <|-- BankAccountProxy
+@enduml
