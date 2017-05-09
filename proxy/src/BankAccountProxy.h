@@ -36,3 +36,4 @@ private:
     RealBankAccountPtr _realbankAccount;
     bool _authenticated = false;
 };
+

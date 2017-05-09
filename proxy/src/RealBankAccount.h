@@ -17,3 +17,4 @@ public:
         std::cout << "Here is your money: " << amount << std::endl;
     }
 };
+
