@@ -16,3 +16,5 @@ With Bridge pattern, it's conveninent to extend different abstactions and implem
 
 The problem with the first approach is if we add another module called _Footer_, then we have to implement two subclasses, `DarkFooter` and `LightFooter`. But only one subclass of WebsiteModule is required with Bridge pattern.
 
+# Credits
+[Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)

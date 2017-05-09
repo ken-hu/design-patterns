@@ -11,3 +11,5 @@ The decorator interface conforms to the interface of the component it decorates.
 
 ![Decorator Sequence](./decorator-seq.png "Decorator Sequence")
 
+# Credits
+[Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)

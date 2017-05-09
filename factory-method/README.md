@@ -11,3 +11,5 @@ In the example, _ElecProductCreator_ is an abstract class, which is implemented 
 
 ![Factory Method](./factory-method.png "Factory Method")
 
+# Credits
+[Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)

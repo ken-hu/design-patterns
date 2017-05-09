@@ -6,3 +6,5 @@ Facade 'wraps' all the classes in a subsystem, the intention is to provide a eai
 
 ![Facade](./Facade.png "Facade")
 
+# Credits
+[Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)

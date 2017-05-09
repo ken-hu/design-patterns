@@ -13,3 +13,5 @@ parent class by 1) using environment variables, 2) using a registry of singleton
 Or, it can be done by moving the implementation of _Instance_ from parent class to a subclass, then we can decide the class 
 of singleton at linktime (linking the object file containing the implementation).
 
+# Credits
+[Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
