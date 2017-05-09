@@ -6,7 +6,7 @@ Prototype is similar to Builder. Instead of passing a builder, it passes the ins
 
 Prototype relies on **object composition**.
 
-![Prototype](./prototype.png "Prototype")
+![Prototype](./doc/prototype.png "Prototype")
 
 # Credits
 [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)

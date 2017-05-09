@@ -1,7 +1,7 @@
-#Intent
+# Intent
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-#Structure
+# Structure
 There is a class hierarchy of factories. Each factory creates concrete products. In the exampe, Abstact class _Vendor_ has two concrete classes _Apple_ and _Microsoft_.
 
 There is also a class hierarchy of a type of products. Abstract class _Phone_ and _Laptop_, each has two subclasses _iPhone_ and _WindowsPhone_, _Mac_ and _Windows_ respectively.
@@ -10,7 +10,7 @@ Only the concrete factory classes have the information of the products. The clie
 
 The key aspect is the parameterizing is achived by **object composition**. The products are built through other objects (_Apple_, _Windows_).
 
-![Abstract Factory](./abstract-factory.png "Abstract Factory")
+![Abstract Factory](./doc/abstract-factory.png "Abstract Factory")
 
 # Credits
 [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)

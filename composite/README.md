@@ -4,7 +4,7 @@ Compose objects into tree structures to represent part-whole hierarchies. Compos
 # Structure
 The recursive composition is achived by aggregating multiple instances (pointers in the implementation) of the base class.
 
-![Composite](./composite.png "Composite")
+![Composite](./doc/composite.png "Composite")
 
 # Credits
 [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)

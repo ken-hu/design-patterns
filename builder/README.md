@@ -10,7 +10,7 @@ But only the director and the abstract builder know all the parts to build any t
 
 From the client and director point of view, the design pattern paramerizing the system relies more on **object composition**.
 
-![Builder](./builder.png "Builder")
+![Builder](./doc/builder.png "Builder")
 
 # Credits
 [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
